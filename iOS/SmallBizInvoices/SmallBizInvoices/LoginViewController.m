@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "EmployeeRootVC.h"
+#import "ViewController.h"
 
 @interface LoginViewController ()
 
@@ -35,8 +37,12 @@
 */
 
 - (IBAction)loginBtnAction:(id)sender {
+    EmployeeRootVC *employeeRootVCScreen = [EmployeeRootVC new];
+    [self.navigationController pushViewController:employeeRootVCScreen animated:YES];
 }
 
 - (IBAction)cancelBtnAction:(id)sender {
+    ViewController *vcScreen = [ViewController new];
+    [self.navigationController pushViewController:vcScreen animated:YES];
 }
 @end

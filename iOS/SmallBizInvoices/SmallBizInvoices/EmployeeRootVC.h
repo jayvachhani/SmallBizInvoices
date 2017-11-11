@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EmployeeRootVC : UIViewController
+- (IBAction)myReceiptsbtnAction:(id)sender;
+- (IBAction)addNewReceiptBtnAction:(id)sender;
 
 @end

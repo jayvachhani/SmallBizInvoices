@@ -7,6 +7,7 @@
 //
 
 #import "EmployeeRootVC.h"
+#import "ReceiptListViewController.h"
 
 @interface EmployeeRootVC ()
 
@@ -34,4 +35,11 @@
 }
 */
 
+- (IBAction)myReceiptsbtnAction:(id)sender {
+    ReceiptListViewController *receiptListScreen = [ReceiptListViewController new];
+    [self.navigationController pushViewController:receiptListScreen animated:YES];
+}
+
+- (IBAction)addNewReceiptBtnAction:(id)sender {
+}
 @end

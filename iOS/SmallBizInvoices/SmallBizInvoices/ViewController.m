@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LoginViewController.h"
 
 @interface ViewController ()
 
@@ -27,11 +28,17 @@
 
 
 - (IBAction)empBtnAction:(id)sender {
+    LoginViewController *loginScreen = [LoginViewController new];
+    [self.navigationController pushViewController:loginScreen animated:YES];
 }
 
 - (IBAction)ManagerBtnAction:(id)sender {
+    LoginViewController *loginScreen = [LoginViewController new];
+    [self.navigationController pushViewController:loginScreen animated:YES];
 }
 
 - (IBAction)ownerBtnAction:(id)sender {
+    LoginViewController *loginScreen = [LoginViewController new];
+    [self.navigationController pushViewController:loginScreen animated:YES];
 }
 @end
