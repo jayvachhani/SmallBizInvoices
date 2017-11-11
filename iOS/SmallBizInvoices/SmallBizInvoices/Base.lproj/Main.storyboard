@@ -56,7 +56,7 @@
         <!--Login View Controller-->
         <scene sceneID="T2F-1m-YWU">
             <objects>
-                <viewController id="7aX-Cs-ezc" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="7aX-Cs-ezc" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7UJ-Hb-bEh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

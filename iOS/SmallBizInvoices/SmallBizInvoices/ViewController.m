@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LoginViewController.h"
+#import "SmallBizAppManager.h"
 
 @interface ViewController ()
 
@@ -26,19 +27,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) gotoLogin {
+    
+    LoginViewController *loginScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self.navigationController pushViewController:loginScreen animated:YES];
+
+}
 
 - (IBAction)empBtnAction:(id)sender {
-    LoginViewController *loginScreen = [LoginViewController new];
-    [self.navigationController pushViewController:loginScreen animated:YES];
+    [SmallBizAppManager sharedInstance].currentUserType = Employee;
+    [self gotoLogin];
 }
 
 - (IBAction)ManagerBtnAction:(id)sender {
-    LoginViewController *loginScreen = [LoginViewController new];
-    [self.navigationController pushViewController:loginScreen animated:YES];
+    [SmallBizAppManager sharedInstance].currentUserType = Manager;
+    [self gotoLogin];
 }
 
 - (IBAction)ownerBtnAction:(id)sender {
-    LoginViewController *loginScreen = [LoginViewController new];
-    [self.navigationController pushViewController:loginScreen animated:YES];
+    [SmallBizAppManager sharedInstance].currentUserType = Owner;
+    NSLog(@"%ld", [SmallBizAppManager sharedInstance].currentUserType);
+    [self gotoLogin];
 }
 @end

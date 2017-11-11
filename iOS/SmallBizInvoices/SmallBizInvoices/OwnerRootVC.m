@@ -7,6 +7,7 @@
 //
 
 #import "OwnerRootVC.h"
+#import "SmallBizAppManager.h"
 
 @interface OwnerRootVC ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    SmallBizAppManager* sharedInstance = [SmallBizAppManager sharedInstance];
 }
 
 - (void)didReceiveMemoryWarning {

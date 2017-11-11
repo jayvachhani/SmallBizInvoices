@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum : NSInteger {
+    Unknown = 0,
+    Employee = 1,
+    Manager = 2,
+    Owner = 3
+} UserType;
+
 @interface SmallBizAppManager : NSObject
+
++(instancetype) sharedInstance;
+
+@property(nonatomic, readwrite) UserType currentUserType;
 
 @end
