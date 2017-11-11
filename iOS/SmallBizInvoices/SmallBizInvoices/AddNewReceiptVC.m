@@ -7,6 +7,8 @@
 //
 
 #import "AddNewReceiptVC.h"
+#import "ScanQRCodeVC.h"
+#import "EnterReceiptDetailsVC.h"
 
 @interface AddNewReceiptVC ()
 
@@ -35,8 +37,12 @@
 */
 
 - (IBAction)addQRCodeBtnAction:(id)sender {
+    ScanQRCodeVC *qrCodeScreen = [ScanQRCodeVC new];
+    [self.navigationController pushViewController:qrCodeScreen animated:YES];
 }
 
 - (IBAction)enterDetailsBtnAction:(id)sender {
+    EnterReceiptDetailsVC *enterReceiptDetailsScreen = [EnterReceiptDetailsVC new];
+    [self.navigationController pushViewController:enterReceiptDetailsScreen animated:YES];
 }
 @end

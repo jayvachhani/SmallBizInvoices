@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ScanQRCodeVC : UIViewController
+@interface ScanQRCodeVC : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
+@property (weak, nonatomic) IBOutlet UIView *preViewLayet;
 
 @end

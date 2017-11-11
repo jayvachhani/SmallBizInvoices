@@ -7,6 +7,7 @@
 //
 
 #import "ScanQRCodeVC.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ScanQRCodeVC ()
 
