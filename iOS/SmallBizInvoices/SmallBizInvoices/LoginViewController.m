@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "EmployeeRootVC.h"
 #import "ViewController.h"
+#import "SmallBizAppManager.h"
+#import "OwnerRootVC.h"
 
 @interface LoginViewController ()
 
@@ -21,28 +23,55 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+#pragma mark -
+-(void) gotoEmployeeRoot {
+    
+    EmployeeRootVC *employeeRoot = [self.storyboard instantiateViewControllerWithIdentifier:@"EmployeeRootVC"];
+    [self.navigationController pushViewController:employeeRoot
+                                         animated:YES];
+}
+
+-(void) gotoManagerRoot {
+    
+    // Pending to change to Manager root screen
+    EmployeeRootVC *employeeRoot = [self.storyboard instantiateViewControllerWithIdentifier:@"EmployeeRootVC"];
+    [self.navigationController pushViewController:employeeRoot
+                                         animated:YES];
+}
+
+-(void) gotoOwnerRoot {
+    
+    OwnerRootVC* ownerRoot = [[OwnerRootVC alloc] initWithNibName:@"OwnerRootVC" bundle:nil];
+    [self.navigationController pushViewController:ownerRoot
+                                         animated:YES];
+}
+
+#pragma mark - Buttons
+- (IBAction)loginBtnAction:(id)sender {
+    
+    switch (  [SmallBizAppManager sharedInstance].currentUserType ) {
+        case Employee:
+            [self gotoEmployeeRoot];
+            break;
+        case Manager:
+            [self gotoManagerRoot];
+            break;
+        case Owner:
+            [self gotoOwnerRoot];
+            break;
+        default:
+            break;
+    }
+}
+
+- (IBAction)cancelBtnAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - Memory
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)loginBtnAction:(id)sender {
-    EmployeeRootVC *employeeRootVCScreen = [EmployeeRootVC new];
-    [self.navigationController pushViewController:employeeRootVCScreen animated:YES];
-}
-
-- (IBAction)cancelBtnAction:(id)sender {
-    ViewController *vcScreen = [ViewController new];
-    [self.navigationController pushViewController:vcScreen animated:YES];
-}
 @end

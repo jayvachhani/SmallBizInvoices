@@ -117,7 +117,7 @@
         <!--Employee RootVC-->
         <scene sceneID="m1V-uG-0fa">
             <objects>
-                <viewController id="T9q-fR-Dbg" customClass="EmployeeRootVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeRootVC" id="T9q-fR-Dbg" customClass="EmployeeRootVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1YP-ZJ-WTC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
