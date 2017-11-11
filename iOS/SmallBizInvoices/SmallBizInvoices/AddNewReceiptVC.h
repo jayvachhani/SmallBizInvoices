@@ -1,5 +1,5 @@
 //
-//  EmployeeRootVC.h
+//  AddNewReceiptVC.h
 //  SmallBizInvoices
 //
 //  Created by Reema Bhalani on 11/11/17.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmployeeRootVC : UIViewController
+@interface AddNewReceiptVC : UIViewController
+- (IBAction)addQRCodeBtnAction:(id)sender;
+- (IBAction)enterDetailsBtnAction:(id)sender;
 
 @end

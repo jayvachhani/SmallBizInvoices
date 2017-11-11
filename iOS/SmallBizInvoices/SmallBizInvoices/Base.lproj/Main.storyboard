@@ -121,20 +121,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft2-WU-Bvv">
-                                <rect key="frame" x="16" y="58" width="343" height="225"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="My Receipts"/>
-                                <connections>
-                                    <action selector="myReceiptsbtnAction:" destination="T9q-fR-Dbg" eventType="touchUpInside" id="B8H-Pm-zHu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XA-dR-TgK">
-                                <rect key="frame" x="14" y="387" width="343" height="253"/>
+                                <rect key="frame" x="0.0" y="387" width="375" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add New Receipt"/>
                                 <connections>
                                     <action selector="addNewReceiptBtnAction:" destination="T9q-fR-Dbg" eventType="touchUpInside" id="EIp-e2-hRD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft2-WU-Bvv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="283"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="My Receipts"/>
+                                <connections>
+                                    <action selector="myReceiptsbtnAction:" destination="T9q-fR-Dbg" eventType="touchUpInside" id="B8H-Pm-zHu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,6 +145,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtA-RN-WAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1213.5999999999999" y="777.66116941529242"/>
+        </scene>
+        <!--Add New ReceiptVC-->
+        <scene sceneID="y8i-yf-TQF">
+            <objects>
+                <viewController id="tCD-Eb-6qu" customClass="AddNewReceiptVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kns-ZG-xOu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zf4-62-uVx">
+                                <rect key="frame" x="0.0" y="2" width="375" height="283"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan QR Code"/>
+                                <connections>
+                                    <action selector="addQRCodeBtnAction:" destination="tCD-Eb-6qu" eventType="touchUpInside" id="FKX-ke-Frt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ata-27-nWY">
+                                <rect key="frame" x="2" y="382" width="375" height="283"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enter Details"/>
+                                <connections>
+                                    <action selector="enterDetailsBtnAction:" destination="tCD-Eb-6qu" eventType="touchUpInside" id="4b1-Xp-lD0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="92B-hB-UUP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omI-lh-M31" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2141" y="770"/>
         </scene>
         <!--Receipt List View Controller-->
         <scene sceneID="hPm-E0-KIS">

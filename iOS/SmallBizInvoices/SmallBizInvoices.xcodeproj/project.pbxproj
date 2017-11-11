@@ -18,6 +18,7 @@
 		855FA1F71FB79D6F00E1DEA5 /* ReceiptListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA1F51FB79D6F00E1DEA5 /* ReceiptListViewController.m */; };
 		855FA1FC1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA1FA1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m */; };
 		855FA2031FB7AE6F00E1DEA5 /* EmployeeRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA2021FB7AE6F00E1DEA5 /* EmployeeRootVC.m */; };
+		855FA2061FB7B1C000E1DEA5 /* AddNewReceiptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA2051FB7B1C000E1DEA5 /* AddNewReceiptVC.m */; };
 		BC5DB90B1FB7ADC100F58145 /* OwnerRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5DB9091FB7ADC100F58145 /* OwnerRootVC.m */; };
 		BC5DB90C1FB7ADC100F58145 /* OwnerRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5DB90A1FB7ADC100F58145 /* OwnerRootVC.xib */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,8 @@
 		855FA1FA1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptDetailsViewController.m; sourceTree = "<group>"; };
 		855FA2011FB7AE6F00E1DEA5 /* EmployeeRootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployeeRootVC.h; sourceTree = "<group>"; };
 		855FA2021FB7AE6F00E1DEA5 /* EmployeeRootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployeeRootVC.m; sourceTree = "<group>"; };
+		855FA2041FB7B1C000E1DEA5 /* AddNewReceiptVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewReceiptVC.h; sourceTree = "<group>"; };
+		855FA2051FB7B1C000E1DEA5 /* AddNewReceiptVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewReceiptVC.m; sourceTree = "<group>"; };
 		BC5DB9081FB7ADC100F58145 /* OwnerRootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwnerRootVC.h; sourceTree = "<group>"; };
 		BC5DB9091FB7ADC100F58145 /* OwnerRootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OwnerRootVC.m; sourceTree = "<group>"; };
 		BC5DB90A1FB7ADC100F58145 /* OwnerRootVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerRootVC.xib; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				BC5DB9081FB7ADC100F58145 /* OwnerRootVC.h */,
 				BC5DB9091FB7ADC100F58145 /* OwnerRootVC.m */,
 				BC5DB90A1FB7ADC100F58145 /* OwnerRootVC.xib */,
+				855FA2041FB7B1C000E1DEA5 /* AddNewReceiptVC.h */,
+				855FA2051FB7B1C000E1DEA5 /* AddNewReceiptVC.m */,
 				855FA1D41FB791FD00E1DEA5 /* Assets.xcassets */,
 				855FA1D61FB791FD00E1DEA5 /* LaunchScreen.storyboard */,
 				855FA1D91FB791FD00E1DEA5 /* Info.plist */,
@@ -240,6 +245,7 @@
 				855FA1DB1FB791FD00E1DEA5 /* main.m in Sources */,
 				BC5DB90B1FB7ADC100F58145 /* OwnerRootVC.m in Sources */,
 				855FA1F71FB79D6F00E1DEA5 /* ReceiptListViewController.m in Sources */,
+				855FA2061FB7B1C000E1DEA5 /* AddNewReceiptVC.m in Sources */,
 				855FA1FC1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m in Sources */,
 				855FA1CD1FB791FD00E1DEA5 /* AppDelegate.m in Sources */,
 			);
