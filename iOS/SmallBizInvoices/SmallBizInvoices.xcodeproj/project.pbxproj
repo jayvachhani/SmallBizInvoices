@@ -15,7 +15,7 @@
 		855FA1DB1FB791FD00E1DEA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA1DA1FB791FD00E1DEA5 /* main.m */; };
 		855FA1E51FB791FD00E1DEA5 /* SmallBizInvoicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA1E41FB791FD00E1DEA5 /* SmallBizInvoicesTests.m */; };
 		855FA1F21FB79B5C00E1DEA5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA1F01FB79B5C00E1DEA5 /* LoginViewController.m */; };
-		855FA1F71FB79D6F00E1DEA5 /* ReceiptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA1F51FB79D6F00E1DEA5 /* ReceiptViewController.m */; };
+		855FA1F71FB79D6F00E1DEA5 /* ReceiptListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA1F51FB79D6F00E1DEA5 /* ReceiptListViewController.m */; };
 		855FA1FC1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA1FA1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +45,8 @@
 		855FA1E61FB791FD00E1DEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		855FA1EF1FB79B5C00E1DEA5 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		855FA1F01FB79B5C00E1DEA5 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		855FA1F41FB79D6F00E1DEA5 /* ReceiptViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiptViewController.h; sourceTree = "<group>"; };
-		855FA1F51FB79D6F00E1DEA5 /* ReceiptViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptViewController.m; sourceTree = "<group>"; };
+		855FA1F41FB79D6F00E1DEA5 /* ReceiptListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiptListViewController.h; sourceTree = "<group>"; };
+		855FA1F51FB79D6F00E1DEA5 /* ReceiptListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptListViewController.m; sourceTree = "<group>"; };
 		855FA1F91FB79DF800E1DEA5 /* ReceiptDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiptDetailsViewController.h; sourceTree = "<group>"; };
 		855FA1FA1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,8 +97,8 @@
 				855FA1D11FB791FD00E1DEA5 /* Main.storyboard */,
 				855FA1EF1FB79B5C00E1DEA5 /* LoginViewController.h */,
 				855FA1F01FB79B5C00E1DEA5 /* LoginViewController.m */,
-				855FA1F41FB79D6F00E1DEA5 /* ReceiptViewController.h */,
-				855FA1F51FB79D6F00E1DEA5 /* ReceiptViewController.m */,
+				855FA1F41FB79D6F00E1DEA5 /* ReceiptListViewController.h */,
+				855FA1F51FB79D6F00E1DEA5 /* ReceiptListViewController.m */,
 				855FA1F91FB79DF800E1DEA5 /* ReceiptDetailsViewController.h */,
 				855FA1FA1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m */,
 				855FA1D41FB791FD00E1DEA5 /* Assets.xcassets */,
@@ -223,7 +223,7 @@
 				855FA1F21FB79B5C00E1DEA5 /* LoginViewController.m in Sources */,
 				855FA1D01FB791FD00E1DEA5 /* ViewController.m in Sources */,
 				855FA1DB1FB791FD00E1DEA5 /* main.m in Sources */,
-				855FA1F71FB79D6F00E1DEA5 /* ReceiptViewController.m in Sources */,
+				855FA1F71FB79D6F00E1DEA5 /* ReceiptListViewController.m in Sources */,
 				855FA1FC1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m in Sources */,
 				855FA1CD1FB791FD00E1DEA5 /* AppDelegate.m in Sources */,
 			);

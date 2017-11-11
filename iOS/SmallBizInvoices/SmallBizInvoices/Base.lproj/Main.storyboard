@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="1194" y="-6"/>
         </scene>
-        <!--Receipt View Controller-->
+        <!--Receipt List View Controller-->
         <scene sceneID="hPm-E0-KIS">
             <objects>
-                <viewController id="2oN-0y-Q4a" customClass="ReceiptViewController" sceneMemberID="viewController">
+                <viewController id="2oN-0y-Q4a" customClass="ReceiptListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6QL-9R-XvD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

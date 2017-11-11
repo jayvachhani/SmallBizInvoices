@@ -6,13 +6,13 @@
 //  Copyright © 2017 Reema Bhalani. All rights reserved.
 //
 
-#import "ReceiptViewController.h"
+#import "ReceiptListViewController.h"
 
-@interface ReceiptViewController ()
+@interface ReceiptListViewController ()
 
 @end
 
-@implementation ReceiptViewController
+@implementation ReceiptListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
