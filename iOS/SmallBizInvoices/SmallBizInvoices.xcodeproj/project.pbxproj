@@ -19,6 +19,8 @@
 		855FA1FC1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA1FA1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m */; };
 		855FA2031FB7AE6F00E1DEA5 /* EmployeeRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA2021FB7AE6F00E1DEA5 /* EmployeeRootVC.m */; };
 		855FA2061FB7B1C000E1DEA5 /* AddNewReceiptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA2051FB7B1C000E1DEA5 /* AddNewReceiptVC.m */; };
+		855FA2091FB7B40500E1DEA5 /* ScanQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA2081FB7B40500E1DEA5 /* ScanQRCodeVC.m */; };
+		855FA20C1FB7B42700E1DEA5 /* EnterReceiptDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA20B1FB7B42700E1DEA5 /* EnterReceiptDetailsVC.m */; };
 		BC5DB90B1FB7ADC100F58145 /* OwnerRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5DB9091FB7ADC100F58145 /* OwnerRootVC.m */; };
 		BC5DB90C1FB7ADC100F58145 /* OwnerRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5DB90A1FB7ADC100F58145 /* OwnerRootVC.xib */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,10 @@
 		855FA2021FB7AE6F00E1DEA5 /* EmployeeRootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployeeRootVC.m; sourceTree = "<group>"; };
 		855FA2041FB7B1C000E1DEA5 /* AddNewReceiptVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewReceiptVC.h; sourceTree = "<group>"; };
 		855FA2051FB7B1C000E1DEA5 /* AddNewReceiptVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewReceiptVC.m; sourceTree = "<group>"; };
+		855FA2071FB7B40500E1DEA5 /* ScanQRCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanQRCodeVC.h; sourceTree = "<group>"; };
+		855FA2081FB7B40500E1DEA5 /* ScanQRCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanQRCodeVC.m; sourceTree = "<group>"; };
+		855FA20A1FB7B42700E1DEA5 /* EnterReceiptDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterReceiptDetailsVC.h; sourceTree = "<group>"; };
+		855FA20B1FB7B42700E1DEA5 /* EnterReceiptDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterReceiptDetailsVC.m; sourceTree = "<group>"; };
 		BC5DB9081FB7ADC100F58145 /* OwnerRootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwnerRootVC.h; sourceTree = "<group>"; };
 		BC5DB9091FB7ADC100F58145 /* OwnerRootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OwnerRootVC.m; sourceTree = "<group>"; };
 		BC5DB90A1FB7ADC100F58145 /* OwnerRootVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerRootVC.xib; sourceTree = "<group>"; };
@@ -114,11 +120,15 @@
 				855FA1FA1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m */,
 				855FA2011FB7AE6F00E1DEA5 /* EmployeeRootVC.h */,
 				855FA2021FB7AE6F00E1DEA5 /* EmployeeRootVC.m */,
+				855FA2071FB7B40500E1DEA5 /* ScanQRCodeVC.h */,
+				855FA2081FB7B40500E1DEA5 /* ScanQRCodeVC.m */,
 				BC5DB9081FB7ADC100F58145 /* OwnerRootVC.h */,
 				BC5DB9091FB7ADC100F58145 /* OwnerRootVC.m */,
 				BC5DB90A1FB7ADC100F58145 /* OwnerRootVC.xib */,
 				855FA2041FB7B1C000E1DEA5 /* AddNewReceiptVC.h */,
 				855FA2051FB7B1C000E1DEA5 /* AddNewReceiptVC.m */,
+				855FA20A1FB7B42700E1DEA5 /* EnterReceiptDetailsVC.h */,
+				855FA20B1FB7B42700E1DEA5 /* EnterReceiptDetailsVC.m */,
 				855FA1D41FB791FD00E1DEA5 /* Assets.xcassets */,
 				855FA1D61FB791FD00E1DEA5 /* LaunchScreen.storyboard */,
 				855FA1D91FB791FD00E1DEA5 /* Info.plist */,
@@ -240,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				855FA2031FB7AE6F00E1DEA5 /* EmployeeRootVC.m in Sources */,
+				855FA2091FB7B40500E1DEA5 /* ScanQRCodeVC.m in Sources */,
 				855FA1F21FB79B5C00E1DEA5 /* LoginViewController.m in Sources */,
 				855FA1D01FB791FD00E1DEA5 /* ViewController.m in Sources */,
 				855FA1DB1FB791FD00E1DEA5 /* main.m in Sources */,
@@ -248,6 +259,7 @@
 				855FA2061FB7B1C000E1DEA5 /* AddNewReceiptVC.m in Sources */,
 				855FA1FC1FB79DF800E1DEA5 /* ReceiptDetailsViewController.m in Sources */,
 				855FA1CD1FB791FD00E1DEA5 /* AppDelegate.m in Sources */,
+				855FA20C1FB7B42700E1DEA5 /* EnterReceiptDetailsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -179,6 +179,36 @@
             </objects>
             <point key="canvasLocation" x="2141" y="770"/>
         </scene>
+        <!--ScanQR CodeVC-->
+        <scene sceneID="i9S-c5-kcm">
+            <objects>
+                <viewController id="qkT-2R-D3l" customClass="ScanQRCodeVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CX9-v5-n3Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0MZ-hd-HGO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="694-0I-1YJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974" y="767"/>
+        </scene>
+        <!--Enter Receipt DetailsVC-->
+        <scene sceneID="jaH-Tl-qdM">
+            <objects>
+                <viewController id="tKH-9b-gAK" customClass="EnterReceiptDetailsVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IQ0-IB-nYO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RaG-zU-fVK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zfv-FC-ecv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3847" y="764"/>
+        </scene>
         <!--Receipt List View Controller-->
         <scene sceneID="hPm-E0-KIS">
             <objects>

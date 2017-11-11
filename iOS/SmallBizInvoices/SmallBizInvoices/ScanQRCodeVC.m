@@ -1,19 +1,18 @@
 //
-//  EmployeeRootVC.m
+//  ScanQRCodeVC.m
 //  SmallBizInvoices
 //
 //  Created by Reema Bhalani on 11/11/17.
 //  Copyright © 2017 Reema Bhalani. All rights reserved.
 //
 
-#import "EmployeeRootVC.h"
-#import "ReceiptListViewController.h"
-#import "AddNewReceiptVC.h"
-@interface EmployeeRootVC ()
+#import "ScanQRCodeVC.h"
+
+@interface ScanQRCodeVC ()
 
 @end
 
-@implementation EmployeeRootVC
+@implementation ScanQRCodeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,16 +33,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)myReceiptsbtnAction:(id)sender {
-    ReceiptListViewController *receiptListScreen = [ReceiptListViewController new];
-    [self.navigationController pushViewController:receiptListScreen animated:YES];
-}
-
-- (IBAction)addNewReceiptBtnAction:(id)sender {
-    AddNewReceiptVC *newReceiptScreen = [AddNewReceiptVC new];
-    [self.navigationController pushViewController:newReceiptScreen animated:YES];
-}
-
 
 @end
