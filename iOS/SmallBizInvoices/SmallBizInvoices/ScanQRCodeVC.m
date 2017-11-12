@@ -9,13 +9,13 @@
 #import "ScanQRCodeVC.h"
 #import <AVFoundation/AVFoundation.h>
 #import "MTBBarcodeScanner.h"
+#import "ReceiptDetailsViewController.h"
 
 @interface ScanQRCodeVC ()
 @property (nonatomic, strong) MTBBarcodeScanner *scanner;
-@property (nonatomic, strong) NSMutableArray *uniqueCodes;
 @property (nonatomic, assign) BOOL captureIsFrozen;
 @property (nonatomic, assign) BOOL didShowCaptureWarning;
-
+@property (nonatomic) ReceiptDetailsViewController *receiptDetailsScreen;
 @end
 
 @implementation ScanQRCodeVC
@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.receiptDetailsScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptDetailsViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,63 +64,32 @@
     
     [MTBBarcodeScanner requestCameraPermissionWithSuccess:^(BOOL success) {
         if (success) {
+           
+            self.receiptDetailsScreen.details = [NSMutableDictionary dictionary];
             
             NSError *error = nil;
             [self.scanner startScanningWithResultBlock:^(NSArray *codes) {
-                for (AVMetadataMachineReadableCodeObject *code in codes) {
-                    NSLog(@"Found code: %@", code.stringValue);
-                }
+                
+                AVMetadataMachineReadableCodeObject *code = [codes lastObject];
+                NSLog(@"Found code: %@", code.stringValue);
+                NSDictionary* aBill = [NSJSONSerialization JSONObjectWithData:[code.stringValue dataUsingEncoding:NSUTF8StringEncoding]
+                                                                      options:NSJSONReadingMutableLeaves error:nil];
+                self.receiptDetailsScreen.details = [NSMutableDictionary dictionaryWithDictionary:aBill];
                 [self.scanner stopScanning];
+                [self gotoReceiptDetails];
             } error:&error];
             
         } else {
             // The user denied access to the camera
+            [self displayPermissionMissingAlert];
         }
     }];
-    
-//    self.uniqueCodes = [[NSMutableArray alloc] init];
-//
-//    NSError *error = nil;
-//    [self.scanner startScanningWithResultBlock:^(NSArray *codes) {
-//        for (AVMetadataMachineReadableCodeObject *code in codes) {
-//            if (code.stringValue && [self.uniqueCodes indexOfObject:code.stringValue] == NSNotFound) {
-//                [self.uniqueCodes addObject:code.stringValue];
-//
-//                NSLog(@"Found unique code: %@", code.stringValue);
-//
-//                // Update the tableview
-//            }
-//        }
-//    } error:&error];
-//
-//    if (error) {
-//        NSLog(@"An error occurred: %@", error.localizedDescription);
-//    }
-    
+
 }
 - (void)stopScanning {
     [self.scanner stopScanning];
     
     self.captureIsFrozen = NO;
-}
-
-#pragma mark - Actions
-
-
-
-
-#pragma mark - UITableViewDataSource
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *reuseIdentifier = @"BarcodeCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier
-                                                            forIndexPath:indexPath];
-    cell.textLabel.text = self.uniqueCodes[indexPath.row];
-    return cell;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.uniqueCodes.count;
 }
 
 #pragma mark - Helper Methods
@@ -165,12 +136,6 @@
     self.captureIsFrozen = !self.captureIsFrozen;
 }
 
-#pragma mark - Setters
-
-- (void)setUniqueCodes:(NSMutableArray *)uniqueCodes {
-    _uniqueCodes = uniqueCodes;
-}
-
 
 /*
 #pragma mark - Navigation
@@ -181,5 +146,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void) gotoReceiptDetails {
+    
+    // Pending to change to Manager root screen
+    [self.navigationController pushViewController:self.receiptDetailsScreen
+                                         animated:YES];
+}
 
 @end
