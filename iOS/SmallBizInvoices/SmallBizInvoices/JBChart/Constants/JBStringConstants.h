@@ -12,8 +12,8 @@
 
 #pragma mark - Labels (Bar Chart)
 
-#define kJBStringLabel2012 localize(@"label.2012", @"2012")
-#define kJBStringLabelAverageMonthlyTemperature localize(@"label.average.monthly.temperature", @"Average Monthly Temperature")
+#define kJBStringLabel2012 localize(@"label.2012", @"11/06 - 11/12")
+#define kJBStringLabelAverageMonthlyTemperature localize(@"label.average.monthly.temperature", @"Bills Report")
 #define kJBStringLabelWorldwide2012 localize(@"label.worldwide.2013", @"Worldwide - 2012")
 #define kJBStringLabelWorldwide2011 localize(@"label.worldwide.2013", @"Worldwide - 2011")
 #define kJBStringLabelWorldwideAverage localize(@"label.worldwide.average", @"Worldwide Average")

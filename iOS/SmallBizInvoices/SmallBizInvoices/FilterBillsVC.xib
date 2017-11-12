@@ -23,11 +23,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSi-5U-LNT">
-                    <rect key="frame" x="0.0" y="644" width="414" height="61"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <rect key="frame" x="9" y="644" width="395" height="61"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="Show Report">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="showReport:" destination="-1" eventType="touchUpInside" id="jtY-B7-2Bu"/>
                     </connections>
@@ -35,14 +41,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="VSi-5U-LNT" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="624" id="09A-CL-DsG"/>
-                <constraint firstItem="aGe-Nw-YmT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3Tm-64-OS6"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="VSi-5U-LNT" secondAttribute="bottom" constant="31" id="CA0-MA-VKx"/>
-                <constraint firstItem="aGe-Nw-YmT" firstAttribute="trailing" secondItem="VSi-5U-LNT" secondAttribute="trailing" id="UBM-zL-GJj"/>
-                <constraint firstAttribute="trailing" secondItem="aGe-Nw-YmT" secondAttribute="trailing" id="Ulp-kK-5WE"/>
-                <constraint firstItem="aGe-Nw-YmT" firstAttribute="leading" secondItem="VSi-5U-LNT" secondAttribute="leading" id="a8s-1V-Zvy"/>
-                <constraint firstItem="aGe-Nw-YmT" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="oa4-hm-NWA"/>
-                <constraint firstItem="aGe-Nw-YmT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pip-1v-Lo2"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="VSi-5U-LNT" secondAttribute="bottom" constant="31" id="FOI-pE-830"/>
+                <constraint firstItem="VSi-5U-LNT" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="9" id="Fbb-gG-BOX"/>
+                <constraint firstItem="aGe-Nw-YmT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PXF-pN-eKd"/>
+                <constraint firstItem="VSi-5U-LNT" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="624" id="cjT-id-RlQ"/>
+                <constraint firstAttribute="trailing" secondItem="aGe-Nw-YmT" secondAttribute="trailing" id="eJc-oS-pSA"/>
+                <constraint firstItem="aGe-Nw-YmT" firstAttribute="centerX" secondItem="VSi-5U-LNT" secondAttribute="centerX" id="eTZ-Qa-her"/>
+                <constraint firstItem="aGe-Nw-YmT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mme-ri-9kk"/>
+                <constraint firstItem="aGe-Nw-YmT" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="wRf-aR-PPz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="32" y="58"/>

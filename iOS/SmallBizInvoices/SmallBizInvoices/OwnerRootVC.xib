@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,54 +19,57 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LRw-P5-FyK">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LRw-P5-FyK">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jl6-c2-g53">
-                    <rect key="frame" x="20" y="156" width="373" height="100"/>
+                    <rect key="frame" x="11" y="156" width="393" height="100"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="E3B-iD-BVA"/>
+                        <constraint firstAttribute="height" constant="100" id="IMb-qS-pol"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="Location">
-                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnLocationTapped:" destination="-1" eventType="touchUpInside" id="ome-cZ-P5C"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neI-kG-1C9">
-                    <rect key="frame" x="20" y="264" width="373" height="100"/>
+                    <rect key="frame" x="11" y="264" width="393" height="100"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="pm7-iI-2VA"/>
+                        <constraint firstAttribute="height" constant="100" id="4jU-DE-Zvc"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="Date range">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnDateTapped:" destination="-1" eventType="touchUpInside" id="Rab-hY-YWE"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y15-MV-mfr">
-                    <rect key="frame" x="20" y="372" width="373" height="100"/>
+                    <rect key="frame" x="11" y="372" width="393" height="100"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="BO3-LV-0E6"/>
+                        <constraint firstAttribute="height" constant="100" id="IHM-hZ-2iS"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="Item">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnItemTapped:" destination="-1" eventType="touchUpInside" id="OtY-aD-IyQ"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx8-Jl-s9c">
-                    <rect key="frame" x="20" y="480" width="373" height="169"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <rect key="frame" x="11" y="480" width="393" height="100"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="Price">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnPriceTapped:" destination="-1" eventType="touchUpInside" id="93m-g8-Baa"/>
@@ -76,19 +78,23 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="y15-MV-mfr" firstAttribute="top" secondItem="neI-kG-1C9" secondAttribute="bottom" constant="8" symbolic="YES" id="0q2-lq-XhX"/>
-                <constraint firstItem="jl6-c2-g53" firstAttribute="trailing" secondItem="neI-kG-1C9" secondAttribute="trailing" id="1BO-bz-Opa"/>
-                <constraint firstItem="neI-kG-1C9" firstAttribute="trailing" secondItem="y15-MV-mfr" secondAttribute="trailing" id="GIv-XC-4lU"/>
-                <constraint firstItem="y15-MV-mfr" firstAttribute="leading" secondItem="tx8-Jl-s9c" secondAttribute="leading" id="MmB-lO-4dc"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jl6-c2-g53" secondAttribute="trailing" constant="21" id="RGg-Jo-t6l"/>
-                <constraint firstItem="tx8-Jl-s9c" firstAttribute="top" secondItem="y15-MV-mfr" secondAttribute="bottom" constant="8" symbolic="YES" id="VqD-S0-wIi"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="tx8-Jl-s9c" secondAttribute="bottom" constant="87" id="b7O-QL-ORZ"/>
-                <constraint firstItem="neI-kG-1C9" firstAttribute="leading" secondItem="y15-MV-mfr" secondAttribute="leading" id="c0y-3I-XoW"/>
-                <constraint firstItem="jl6-c2-g53" firstAttribute="leading" secondItem="neI-kG-1C9" secondAttribute="leading" id="dnl-VH-Ooa"/>
-                <constraint firstItem="jl6-c2-g53" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="136" id="ier-Zt-prb"/>
-                <constraint firstItem="y15-MV-mfr" firstAttribute="trailing" secondItem="tx8-Jl-s9c" secondAttribute="trailing" id="sCe-H9-Ebb"/>
-                <constraint firstItem="neI-kG-1C9" firstAttribute="top" secondItem="jl6-c2-g53" secondAttribute="bottom" constant="8" symbolic="YES" id="tRs-yN-bXP"/>
-                <constraint firstItem="jl6-c2-g53" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="z9Y-eE-nwV"/>
+                <constraint firstItem="LRw-P5-FyK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3bM-WC-BEg"/>
+                <constraint firstItem="neI-kG-1C9" firstAttribute="top" secondItem="jl6-c2-g53" secondAttribute="bottom" constant="8" symbolic="YES" id="8xZ-zU-dVK"/>
+                <constraint firstItem="neI-kG-1C9" firstAttribute="leading" secondItem="y15-MV-mfr" secondAttribute="leading" id="96r-5z-zYF"/>
+                <constraint firstItem="tx8-Jl-s9c" firstAttribute="top" secondItem="y15-MV-mfr" secondAttribute="bottom" constant="8" symbolic="YES" id="Ie0-3R-5ZO"/>
+                <constraint firstItem="y15-MV-mfr" firstAttribute="leading" secondItem="tx8-Jl-s9c" secondAttribute="leading" id="J5u-Hz-P4P"/>
+                <constraint firstItem="LRw-P5-FyK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="K6N-ea-o3I"/>
+                <constraint firstItem="jl6-c2-g53" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="136" id="SkB-lK-UbC"/>
+                <constraint firstItem="jl6-c2-g53" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="11" id="Ung-kT-LFr"/>
+                <constraint firstItem="y15-MV-mfr" firstAttribute="top" secondItem="neI-kG-1C9" secondAttribute="bottom" constant="8" symbolic="YES" id="Vl6-3h-2mH"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="tx8-Jl-s9c" secondAttribute="bottom" constant="156" id="fIV-z6-oSC"/>
+                <constraint firstItem="LRw-P5-FyK" firstAttribute="centerX" secondItem="y15-MV-mfr" secondAttribute="centerX" id="gvW-OO-57o"/>
+                <constraint firstItem="jl6-c2-g53" firstAttribute="leading" secondItem="neI-kG-1C9" secondAttribute="leading" id="o52-TG-Gve"/>
+                <constraint firstItem="y15-MV-mfr" firstAttribute="trailing" secondItem="tx8-Jl-s9c" secondAttribute="trailing" id="qFh-kb-eIJ"/>
+                <constraint firstItem="LRw-P5-FyK" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="u2n-OX-KVt"/>
+                <constraint firstAttribute="trailing" secondItem="LRw-P5-FyK" secondAttribute="trailing" id="vlC-4g-IgQ"/>
+                <constraint firstItem="jl6-c2-g53" firstAttribute="trailing" secondItem="neI-kG-1C9" secondAttribute="trailing" id="zFQ-IJ-raH"/>
+                <constraint firstItem="neI-kG-1C9" firstAttribute="trailing" secondItem="y15-MV-mfr" secondAttribute="trailing" id="zvs-IZ-LRg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="32" y="58"/>

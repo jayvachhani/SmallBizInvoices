@@ -18,9 +18,9 @@
 #import "JBConstants.h"
 
 // Numerics
-CGFloat const kJBBarChartViewControllerChartHeight = 250.0f;
+CGFloat const kJBBarChartViewControllerChartHeight = 350.0f;
 CGFloat const kJBBarChartViewControllerChartPadding = 10.0f;
-CGFloat const kJBBarChartViewControllerChartHeaderHeight = 80.0f;
+CGFloat const kJBBarChartViewControllerChartHeaderHeight = 120.0f;
 CGFloat const kJBBarChartViewControllerChartHeaderPadding = 20.0f;
 CGFloat const kJBBarChartViewControllerChartFooterHeight = 25.0f;
 CGFloat const kJBBarChartViewControllerChartFooterPadding = 5.0f;
@@ -110,21 +110,21 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 }
 
 - (NSArray *) itemQuantities {
-    return [NSArray arrayWithObjects:@"50",@"20",@"60",@"10",@"25",@"60",@"12", nil];
+    return [NSArray arrayWithObjects:@"10",@"20",@"60",@"10",@"25",@"60",@"12", nil];
 }
 
 - (NSArray *) items {
-    return [NSArray arrayWithObjects:@"I-Tires",@"Axels",@"Floor Sheets",@"Door Locks",@"Wipers",@"BreakPads",@"Battery", nil];
+    return [NSArray arrayWithObjects:@"Wipers",@"Axels",@"Floor Sheets",@"Door Locks",@"Tiers",@"BreakPads",@"Battery", nil];
 }
 
 
 - (NSArray *) prices {
-    return [NSArray arrayWithObjects:@"$1200",@"$1000",@"$2000",@"@2500",@"$500",@"$1200",@"$2250", nil];
+    return [NSArray arrayWithObjects:@"$250",@"$1000",@"$2000",@"@2500",@"$500",@"$1200",@"$2250", nil];
     
 }
 
 - (NSArray *) pricesLocations {
-    return [NSArray arrayWithObjects:@"$2200",@"$800",@"$2000",@"@500",@"$1500",@"$1900",@"$2500", nil];
+    return [NSArray arrayWithObjects:@"$250",@"$800",@"$2000",@"@500",@"$1500",@"$1900",@"$2500", nil];
     
 }
 
@@ -223,7 +223,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
     self.barChartView.inverted = NO;
     self.barChartView.backgroundColor = kJBColorBarChartBackground;
     
-    JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBBarChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeaderHeight)];
+    JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.6) - ceil(kJBBarChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeaderHeight)];
     headerView.titleLabel.text = [kJBStringLabelAverageMonthlyTemperature uppercaseString];
     headerView.subtitleLabel.text = kJBStringLabel2012;
     headerView.separatorColor = kJBColorBarChartHeaderSeparatorColor;
@@ -284,11 +284,17 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
     
     strVal = [strVal stringByAppendingFormat:@"%d", [valueNumber intValue]];
     
+    // Price Or Quantity
     [self.informationView setValueText:strVal unitText:nil];
+    
+    // Price or Quantity
+    [self.tooltipView setText:[strVal uppercaseString]];
+
+    // Location, Item Name, Date, Day
     [self.informationView setTitleText:[[self.monthlySymbols objectAtIndex:index] uppercaseString]];
+    
     [self.informationView setHidden:NO animated:YES];
     [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
-    [self.tooltipView setText:[[self.monthlySymbols objectAtIndex:index] uppercaseString]];
 }
 
 - (void)didDeselectBarChartView:(JBBarChartView *)barChartView
