@@ -47,7 +47,32 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] init];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", details.allKeys[indexPath.row],  [details objectForKey:details.allKeys[indexPath.row]]];
+    
+    NSString* aKey =  details.allKeys[indexPath.row];
+    
+    if ( [aKey isEqualToString:@"VendorDetail"] ) {
+        
+        NSString* vendorName = details[aKey][@"VendorName"];
+        NSString* vendorLocation = details[aKey][@"VendorLocation"];
+        cell.textLabel.text = [NSString stringWithFormat:@"Vendor : %@, %@", vendorName, vendorLocation];
+    }
+    else if( [aKey isEqualToString:@"ItemList"] ){
+        
+        NSArray* items = details[aKey];
+        NSString* itemNames = @"";
+        for ( int index=0; index<items.count; index++ ) {
+            itemNames = [itemNames stringByAppendingFormat:@"%@ %@, ", items[index][@"Quantity"], items[index][@"ItemName"]];
+        }
+        
+        if (itemNames.length > 2)
+            itemNames = [itemNames substringToIndex:itemNames.length-2];
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"Items: %@", itemNames];
+    }
+    else{
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@", aKey,  [details objectForKey:aKey]];
+    }
+    
     NSLog(@"%@", cell.textLabel.text);
     return cell;
 }
