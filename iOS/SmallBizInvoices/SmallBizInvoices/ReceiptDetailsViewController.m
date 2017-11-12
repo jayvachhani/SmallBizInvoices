@@ -63,34 +63,40 @@
 */
 
 - (IBAction)uploadReceiptBtnAction:(id)sender {
-    NSString *urlString1 = @"http://myurl.com/endpoint01/push_notifications";
-    NSData *jsonBodyData = [NSJSONSerialization dataWithJSONObject:details
+    NSDictionary *headers = @{ @"content-type": @"application/json",
+                               @"accept": @"application/json",
+                               @"cache-control": @"no-cache",
+                               @"postman-token": @"7dcdb3ea-fdc4-cdbf-1abd-4ad886839e6e" };
+    NSDictionary *parameters = @{@"PayDate": @"2017-11-12T02:44:07.338996Z",
+                                  @"ItemList": @[ @{ @"ItmeId": @1, @"ItemName": @"", @"Amount": @100, @"Quantity": @1 } ],
+                                  @"VendorDetail": @{ @"VendorID": @"3bc5eaee-f4f0-4485-bc99-6159fcf35729", @"VendorName": @"", @"VendorLocation": @"Mountain View" },
+                                  @"PurchasedBy": @"Jay",
+                                  @"TotalPrice": @100,
+                                  @"PurchaseLocation": @"Mountain View" };
+    
+    NSData *jsonBodyData = [NSJSONSerialization dataWithJSONObject:parameters
                                                            options:kNilOptions
                                                              error:nil];
     // watch out: error is nil here, but you never do that in production code. Do proper checks!
-    NSMutableURLRequest *request = [NSMutableURLRequest new];
-    request.HTTPMethod = @"POST";
-    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://bizbill.satnidbiz.com:9001/api/create"]
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:10.0];
+
     // for alternative 1:
-    [request setURL:[NSURL URLWithString:urlString1]];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPMethod:@"POST"];
+    [request setAllHTTPHeaderFields:headers];
     [request setHTTPBody:jsonBodyData];
     
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:config
-                                                          delegate:nil
-                                                     delegateQueue:[NSOperationQueue mainQueue]];
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
-                                            completionHandler:^(NSData * _Nullable data,
-                                                                NSURLResponse * _Nullable response,
-                                                                NSError * _Nullable error) {
-                                                NSLog(@"Yay, done! Check for errors in response!");
-                                                NSHTTPURLResponse *asHTTPResponse = (NSHTTPURLResponse *) response;
-                                                NSLog(@"The response is: %@", asHTTPResponse);
-                                                NSDictionary *forJSONObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-                                                NSLog(@"One of these might exist - object: %@", forJSONObject);
-                                            }];
-    [task resume];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
+                                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                    if (error) {
+                                                        NSLog(@"%@", error);
+                                                    } else {
+                                                        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                                                        NSLog(@"%@", httpResponse);
+                                                    }
+                                                }];
+    [dataTask resume];
 }
 @end
