@@ -21,8 +21,11 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     NSLog(@"detials %@", self.details);
-    //[self.tableView registerClass:self forCellReuseIdentifier:@"BarcodeCell"];
 
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.jpg"]];
+    [tempImageView setFrame:self.tableView.frame];
+    self.tableView.backgroundView = tempImageView;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
