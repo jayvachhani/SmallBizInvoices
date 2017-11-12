@@ -24,6 +24,7 @@
 		855FA20F1FB7BDEA00E1DEA5 /* MTBBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 855FA20E1FB7BDEA00E1DEA5 /* MTBBarcodeScanner.m */; };
 		855FA2121FB7EBA900E1DEA5 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 855FA2111FB7EBA900E1DEA5 /* bg.jpg */; };
 		855FA2141FB815FE00E1DEA5 /* Scanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 855FA2131FB815FD00E1DEA5 /* Scanner.png */; };
+		855FA2161FB8C4AD00E1DEA5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 855FA2151FB8C4AD00E1DEA5 /* icon.png */; };
 		BC127C7B1FB81D11002294C4 /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC127C4E1FB81D11002294C4 /* JBBaseChartViewController.m */; };
 		BC127C7C1FB81D11002294C4 /* JBBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC127C501FB81D11002294C4 /* JBBaseNavigationController.m */; };
 		BC127C7D1FB81D11002294C4 /* JBBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC127C521FB81D11002294C4 /* JBBaseTableViewController.m */; };
@@ -99,6 +100,7 @@
 		855FA20E1FB7BDEA00E1DEA5 /* MTBBarcodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBBarcodeScanner.m; sourceTree = "<group>"; };
 		855FA2111FB7EBA900E1DEA5 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		855FA2131FB815FD00E1DEA5 /* Scanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scanner.png; sourceTree = "<group>"; };
+		855FA2151FB8C4AD00E1DEA5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = SmallBizInvoices/Assets.xcassets/AppIcon.appiconset/icon.png; sourceTree = SOURCE_ROOT; };
 		BC127C461FB81D11002294C4 /* JBColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBColorConstants.h; sourceTree = "<group>"; };
 		BC127C471FB81D11002294C4 /* JBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBConstants.h; sourceTree = "<group>"; };
 		BC127C481FB81D11002294C4 /* JBFontConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBFontConstants.h; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		855FA2101FB7EB8100E1DEA5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				855FA2151FB8C4AD00E1DEA5 /* icon.png */,
 				855FA2111FB7EBA900E1DEA5 /* bg.jpg */,
 				855FA2131FB815FD00E1DEA5 /* Scanner.png */,
 			);
@@ -515,6 +518,7 @@
 				855FA2121FB7EBA900E1DEA5 /* bg.jpg in Resources */,
 				855FA1D31FB791FD00E1DEA5 /* Main.storyboard in Resources */,
 				BC127C8D1FB81D11002294C4 /* icon-bar-chart.png in Resources */,
+				855FA2161FB8C4AD00E1DEA5 /* icon.png in Resources */,
 				BC127C801FB81D11002294C4 /* InfoPlist.strings in Resources */,
 				BC5DB9111FB7B4C500F58145 /* FilterBillsVC.xib in Resources */,
 				BC127C8C1FB81D11002294C4 /* icon-arrow@2x.png in Resources */,
