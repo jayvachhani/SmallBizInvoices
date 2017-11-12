@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JBBarChartViewController.h"
 
 @interface FilterBillsVC : UIViewController
+
+@property (nonatomic, readwrite) ChartFilter filter;
 
 @end

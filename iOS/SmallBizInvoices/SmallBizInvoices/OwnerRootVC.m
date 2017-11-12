@@ -8,6 +8,8 @@
 
 #import "OwnerRootVC.h"
 #import "SmallBizAppManager.h"
+#import "FilterBillsVC.h"
+#import "JBBarChartViewController.h"
 
 @interface OwnerRootVC ()
 
@@ -27,22 +29,36 @@
     self.navigationItem.title = @"Filter Bills";
 }
 
+-(void) gotoFilterVC:(ChartFilter) filter {
+    
+    FilterBillsVC* filterVC = [[FilterBillsVC alloc] initWithNibName:@"FilterBillsVC" bundle:nil];
+    filterVC.filter = filter;
+    [self.navigationController pushViewController:filterVC
+                                         animated:YES];
+}
+
 - (IBAction)btnLocationTapped:(id)sender {
     NSLog(@"Filter by Location");
+    
+    [self gotoFilterVC:Location];
 }
 
 - (IBAction)btnDateTapped:(id)sender {
     NSLog(@"Filter by Date");
+    [self gotoFilterVC:DateRange];
 
 }
 
 - (IBAction)btnItemTapped:(id)sender {
     NSLog(@"Filter by Item");
+    [self gotoFilterVC:Item];
+
 
 }
 
 - (IBAction)btnPriceTapped:(id)sender {
     NSLog(@"Filter by Price");
+    [self gotoFilterVC:Price];
 
 }
 

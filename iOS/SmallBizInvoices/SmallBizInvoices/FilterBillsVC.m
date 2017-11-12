@@ -7,13 +7,14 @@
 //
 
 #import "FilterBillsVC.h"
-#import "JBBarChartViewController.h"
 
 @interface FilterBillsVC ()
 
 @end
 
 @implementation FilterBillsVC
+
+@synthesize filter;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +27,7 @@
 }
 
 - (IBAction) showReport:(id)sender {
-    JBBarChartViewController *barChartController = [[JBBarChartViewController alloc] initWithFilter:Item];
+    JBBarChartViewController *barChartController = [[JBBarChartViewController alloc] initWithFilter:self.filter];
     [self.navigationController pushViewController:barChartController
                                          animated:YES];
     [barChartController reloadChart];
