@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReceiptListViewController : UIViewController
+@interface ReceiptListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
 
 @end
