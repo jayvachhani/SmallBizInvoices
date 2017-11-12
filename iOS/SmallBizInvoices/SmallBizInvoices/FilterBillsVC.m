@@ -7,6 +7,7 @@
 //
 
 #import "FilterBillsVC.h"
+#import "JBBarChartViewController.h"
 
 @interface FilterBillsVC ()
 
@@ -22,6 +23,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction) showReport:(id)sender {
+    JBBarChartViewController *barChartController = [[JBBarChartViewController alloc] initWithFilter:Item];
+    [self.navigationController pushViewController:barChartController
+                                         animated:YES];
+    [barChartController reloadChart];
 }
 
 /*
