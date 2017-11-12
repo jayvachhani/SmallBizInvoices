@@ -13,4 +13,6 @@
 
 @property (nonatomic, readwrite) ChartFilter filter;
 
+- (IBAction) showReport:(id)sender;
+
 @end

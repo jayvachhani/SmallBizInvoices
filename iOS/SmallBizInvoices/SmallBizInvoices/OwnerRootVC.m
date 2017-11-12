@@ -33,8 +33,9 @@
     
     FilterBillsVC* filterVC = [[FilterBillsVC alloc] initWithNibName:@"FilterBillsVC" bundle:nil];
     filterVC.filter = filter;
+    [filterVC showReport:nil];
     [self.navigationController pushViewController:filterVC
-                                         animated:YES];
+                                         animated:NO];
 }
 
 - (IBAction)btnLocationTapped:(id)sender {
