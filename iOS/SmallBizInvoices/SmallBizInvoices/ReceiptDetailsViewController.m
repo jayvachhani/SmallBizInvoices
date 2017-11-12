@@ -30,6 +30,13 @@
 }
 
 
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.title = @"Bill Details";
+}
+
+
 
 #pragma mark - UITableViewDataSource
 

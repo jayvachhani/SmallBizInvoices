@@ -23,6 +23,13 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.title = @"Welcome";
+}
+
+
 #pragma mark -
 -(void) gotoEmployeeRoot {
     

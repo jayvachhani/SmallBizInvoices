@@ -26,7 +26,7 @@
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    self.navigationItem.title = @"Filter Bills";
+    self.navigationItem.title = @"Jay";
 }
 
 -(void) gotoFilterVC:(ChartFilter) filter {

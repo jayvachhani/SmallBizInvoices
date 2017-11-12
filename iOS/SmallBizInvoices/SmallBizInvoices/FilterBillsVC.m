@@ -21,6 +21,36 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSString* title = [self navTitle];
+    self.navigationItem.title = title;
+}
+
+- (NSString *) navTitle {
+    switch (self.filter) {
+        case DateRange:
+            return @"Filter by Date range";
+            break;
+        case Location:
+            return @"Filter by Location";
+            break;
+        case Item:
+            return @"Filter by Item";
+            break;
+        case Price:
+            return @"Filter by Price";
+            break;
+        case Day:
+            return @"Filter by Week";
+            break;
+        default:
+            return @"All";
+            break;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

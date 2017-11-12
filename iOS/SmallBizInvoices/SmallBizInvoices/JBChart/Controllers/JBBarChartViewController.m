@@ -248,6 +248,8 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 {
     [super viewWillAppear:animated];
     [self.barChartView setState:JBChartViewStateExpanded];
+    
+    self.navigationItem.title = [self title];
 }
 
 #pragma mark - JBChartViewDataSource
