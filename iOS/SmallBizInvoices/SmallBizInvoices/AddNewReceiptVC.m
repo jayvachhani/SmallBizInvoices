@@ -49,12 +49,17 @@
                                          animated:YES];
 }
 
+- (void) gotoAddReceiptDetailsEnter {
+    EnterReceiptDetailsVC *enterReceiptDetailsScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"EnterReceiptDetailsVC"];
+    [self.navigationController pushViewController:enterReceiptDetailsScreen
+                                         animated:YES];
+}
+
 - (IBAction)addQRCodeBtnAction:(id)sender {
     [self gotoAddQRCode];
 }
 
 - (IBAction)enterDetailsBtnAction:(id)sender {
-    EnterReceiptDetailsVC *enterReceiptDetailsScreen = [EnterReceiptDetailsVC new];
-    [self.navigationController pushViewController:enterReceiptDetailsScreen animated:YES];
+    [self gotoAddReceiptDetailsEnter];
 }
 @end

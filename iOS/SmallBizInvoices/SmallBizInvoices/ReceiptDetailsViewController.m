@@ -105,6 +105,13 @@
                                                     } else {
                                                         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                                                         NSLog(@"%@", httpResponse);
+                                                        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Successfully Uploaded" message:@"Your bills details uploaded successfully" preferredStyle:UIAlertControllerStyleAlert];
+                                                        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                                                           [self.navigationController popToViewController:[[self.navigationController viewControllers] objectAtIndex:2] animated:YES];
+                                                        }];
+                                                        [alertController addAction:action];
+                                                        [self presentViewController:alertController animated:YES completion:nil];
+                                                        
                                                     }
                                                 }];
     [dataTask resume];
