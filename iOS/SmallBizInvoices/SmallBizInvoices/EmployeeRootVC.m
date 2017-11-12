@@ -9,6 +9,8 @@
 #import "EmployeeRootVC.h"
 #import "ReceiptListViewController.h"
 #import "AddNewReceiptVC.h"
+#import "SmallBizAppManager.h"
+
 @interface EmployeeRootVC ()
 
 @end
@@ -34,15 +36,26 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void) gotoAddNewReceipt {
+    AddNewReceiptVC *newReceiptScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"AddNewReceiptVC"];
+    [self.navigationController pushViewController:newReceiptScreen
+                                         animated:YES];
+}
+- (void) gotoMyReceipts {
+    
+     ReceiptListViewController *receiptListScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptListViewController"];
+    [self.navigationController pushViewController:receiptListScreen
+                                         animated:YES];
+}
 
 - (IBAction)myReceiptsbtnAction:(id)sender {
-    ReceiptListViewController *receiptListScreen = [ReceiptListViewController new];
-    [self.navigationController pushViewController:receiptListScreen animated:YES];
+    [SmallBizAppManager sharedInstance].currentUserType = Employee;
+    [self gotoMyReceipts];
 }
 
 - (IBAction)addNewReceiptBtnAction:(id)sender {
-    AddNewReceiptVC *newReceiptScreen = [AddNewReceiptVC new];
-    [self.navigationController pushViewController:newReceiptScreen animated:YES];
+    [SmallBizAppManager sharedInstance].currentUserType = Employee;
+    [self gotoAddNewReceipt];
 }
 
 

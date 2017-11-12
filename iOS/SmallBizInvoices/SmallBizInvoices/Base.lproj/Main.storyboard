@@ -4,9 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -102,7 +100,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="loginBtnAction:" destination="7aX-Cs-ezc" eventType="touchUpInside" id="0aV-lD-zdl"/>
+                                    <action selector="loginBtnAction:" destination="7aX-Cs-ezc" eventType="touchUpInside" id="68h-RM-1Kd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -150,7 +148,7 @@
         <!--Add New ReceiptVC-->
         <scene sceneID="y8i-yf-TQF">
             <objects>
-                <viewController id="tCD-Eb-6qu" customClass="AddNewReceiptVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddNewReceiptVC" id="tCD-Eb-6qu" customClass="AddNewReceiptVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kns-ZG-xOu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,32 +181,22 @@
         <!--ScanQR CodeVC-->
         <scene sceneID="i9S-c5-kcm">
             <objects>
-                <viewController id="qkT-2R-D3l" customClass="ScanQRCodeVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScanQRCodeVC" id="qkT-2R-D3l" customClass="ScanQRCodeVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CX9-v5-n3Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRSquareOverlay" translatesAutoresizingMaskIntoConstraints="NO" id="gf6-mj-7DK">
-                                <rect key="frame" x="61" y="178" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="2I3-0n-Ecd"/>
-                                    <constraint firstAttribute="height" constant="250" id="9ZU-m5-o62"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QRSquareOverlay" translatesAutoresizingMaskIntoConstraints="NO" id="gf6-mj-7DK">
+                                <rect key="frame" x="-2" y="178" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyb-ev-jlJ" userLabel="Preview Layer View">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qyb-ev-jlJ" userLabel="Preview Layer View">
                                 <rect key="frame" x="-2" y="-11" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="gf6-mj-7DK" firstAttribute="centerX" secondItem="qyb-ev-jlJ" secondAttribute="centerX" id="1Fx-qV-opS"/>
-                            <constraint firstItem="0MZ-hd-HGO" firstAttribute="trailing" secondItem="qyb-ev-jlJ" secondAttribute="trailing" constant="2" id="2vC-lP-hDa"/>
-                            <constraint firstItem="0MZ-hd-HGO" firstAttribute="bottom" secondItem="qyb-ev-jlJ" secondAttribute="bottom" constant="31" id="S7v-tx-Cl6"/>
-                            <constraint firstItem="qyb-ev-jlJ" firstAttribute="top" secondItem="CX9-v5-n3Q" secondAttribute="topMargin" constant="-31" id="ekm-KU-18K"/>
-                            <constraint firstItem="gf6-mj-7DK" firstAttribute="leading" secondItem="0MZ-hd-HGO" secondAttribute="leading" constant="61" id="lQk-OQ-8qg"/>
-                            <constraint firstItem="gf6-mj-7DK" firstAttribute="top" secondItem="CX9-v5-n3Q" secondAttribute="top" constant="178" id="zum-aD-dZo"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0MZ-hd-HGO"/>
                     </view>
                     <connections>
@@ -217,12 +205,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="694-0I-1YJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2974" y="767"/>
+            <point key="canvasLocation" x="2973.5999999999999" y="766.86656671664173"/>
         </scene>
         <!--Enter Receipt DetailsVC-->
         <scene sceneID="jaH-Tl-qdM">
             <objects>
-                <viewController id="tKH-9b-gAK" customClass="EnterReceiptDetailsVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnterReceiptDetailsVC" id="tKH-9b-gAK" customClass="EnterReceiptDetailsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IQ0-IB-nYO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,7 +225,7 @@
         <!--Receipt List View Controller-->
         <scene sceneID="hPm-E0-KIS">
             <objects>
-                <viewController id="2oN-0y-Q4a" customClass="ReceiptListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReceiptListViewController" id="2oN-0y-Q4a" customClass="ReceiptListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6QL-9R-XvD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,7 +247,7 @@
         <!--Receipt Details View Controller-->
         <scene sceneID="dVz-Ss-d4n">
             <objects>
-                <viewController id="57G-9S-Nwu" customClass="ReceiptDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReceiptDetailsViewController" id="57G-9S-Nwu" customClass="ReceiptDetailsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WSZ-24-RSo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

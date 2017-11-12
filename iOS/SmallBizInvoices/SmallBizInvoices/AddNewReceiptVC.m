@@ -9,6 +9,7 @@
 #import "AddNewReceiptVC.h"
 #import "ScanQRCodeVC.h"
 #import "EnterReceiptDetailsVC.h"
+#import "SmallBizAppManager.h"
 
 @interface AddNewReceiptVC ()
 
@@ -36,9 +37,14 @@
 }
 */
 
+-(void) gotoAddQRCode {
+    ScanQRCodeVC *qrCodeScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"ScanQRCodeVC"];
+    [self.navigationController pushViewController:qrCodeScreen
+                                         animated:YES];
+}
+
 - (IBAction)addQRCodeBtnAction:(id)sender {
-    ScanQRCodeVC *qrCodeScreen = [ScanQRCodeVC new];
-    [self.navigationController pushViewController:qrCodeScreen animated:YES];
+    [self gotoAddQRCode];
 }
 
 - (IBAction)enterDetailsBtnAction:(id)sender {

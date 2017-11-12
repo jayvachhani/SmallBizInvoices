@@ -28,6 +28,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+    <key>NSCameraUsageDescription</key>
+    <string>Can we access your camera in order to scan barcodes?</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
